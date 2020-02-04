@@ -8,7 +8,7 @@ class View{
 		$this->viewData = $viewData;
 		$this->viewFile = $viewFile;
 	}
-	public function getMethod(){
+	public function getAction(){
 		return (explode('/',$this->viewFile)[1]);
 	}
 	public function render(){

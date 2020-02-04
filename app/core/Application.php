@@ -1,18 +1,15 @@
 <?php
 class Application{
-	protected $controller = 'WorkoutController';
-	protected $method = 'index';
+	protected $controller = 'HomeController';
+	protected $action = 'index';
 
 	public function __construct(){
 		$this->prepareURL();
 		$this->controller = ucfirst($this->controller);
-		$this->checkSession();
-		/* If the controller is a valid php file, create new object */
 		if(file_exists(CONTROLLER.$this->controller.'.php')){
 			$this->controller = new $this->controller;
-			/* If the method is a valid method in the new object, run the method */
-			if(method_exists($this->controller,$this->method)){
-				call_user_func_array([$this->controller,$this->method],[]);
+			if(method_exists($this->controller,$this->action)){
+				call_user_func_array([$this->controller,$this->action],[]);
 			}
 		}
 	}
@@ -34,11 +31,11 @@ class Application{
 	}
 
 	/* Redirects to login if session not set and not visiting a login page */
-	protected function checkSession(){
+	/*protected function checkSession(){
 		session_start();
 		if(!isset($_SESSION['email']) && $this->controller!='LoginController'){
 			header('Location: /login');
 		}
-	}
+	}*/
 }
 ?>
