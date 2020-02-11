@@ -1,0 +1,9 @@
+put -r app php/app
+put -r public php/public
+chmod 770 php/public
+chmod 770 php/app
+chmod 770 php/app/controller
+chmod 770 php/app/core
+chmod 770 php/app/model
+chmod 770 php/app/view
+chmod 770 php/app/view/home
