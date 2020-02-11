@@ -1,6 +1,7 @@
 put -r app php/app
 put -r public php/public
 chmod 770 php/public
+chmod 770 php/public/img
 chmod 770 php/app
 chmod 770 php/app/controller
 chmod 770 php/app/core
