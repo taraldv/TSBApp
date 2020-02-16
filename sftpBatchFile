@@ -8,3 +8,4 @@ chmod 770 php/app/core
 chmod 770 php/app/model
 chmod 770 php/app/view
 chmod 770 php/app/view/home
+chmod 770 php/app/view/temp
