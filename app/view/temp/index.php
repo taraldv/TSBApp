@@ -1,8 +1,22 @@
 <?php include VIEW.'header.php';?>
 <?php include VIEW.'nav.php';?>
-<img src="/img/logo2.png">
-<div id='degrees'>20</div><!--<div id='celcius'>°C</div>-->
-<img data-angle='0' id='temperatureWheel' src="/img/wheel.png">
+<div class='container-fluid'>
+	<div class='media'>
+		<img class='img-fluid' src="/img/logo2.png">
+	</div>
+	<h1 class="text-center">
+		<div>
+			<?php
+				echo ucfirst("$this->viewData");
+			?>	
+		</div>
+		<div class='d-inline-block' id='degrees'>20</div>
+		<div class='d-inline-block' id='celcius'>°C</div>
+	</h1>
+	<div class='media'>
+		<img class='img-fluid' data-angle='0' id='temperatureWheel' src="/img/wheel.png">
+	</div>
+</div>
 <script>
 	applyTempEventListeners();
 </script>
