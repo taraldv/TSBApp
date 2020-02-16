@@ -11,14 +11,11 @@ function applyTempEventListeners(){
 		let currentY = event.touches[0].clientY;
 		let differenceX = x - currentX;
 		let differenceY = y - currentY;
-		//Minimum distance for 1 degree rotation
-		/*let moduloX = differenceX % 20;
-		let moduloY = differenceY % 20;
-		console.log(moduloY);
-			console.log(moduloX);
-		if(moduloY > 1 && moduloX > 1){
-			rotate(1);
-		}*/
+		x = currentX;
+		y = currentY;
+		//Where on the image the touch started, a swipe will increase or decrease angle/temp
+		rotate(3);
+		updateRoomTemperature(1);
 	});
 }
 
@@ -28,4 +25,12 @@ function rotate(angle){
 	let newAngle = parseInt(oldAngle)+angle;
 	temperatureWheel.setAttribute('data-angle',newAngle);
 	temperatureWheel.style = 'transform: rotate(' +newAngle+ 'deg)';
+	
+	
+}
+
+function updateRoomTemperature(degrees){
+	let roomTemperatureDiv = document.getElementById('degrees');
+	let roomTemperature = roomTemperatureDiv.innerText;
+	roomTemperatureDiv.innerText = parseInt(roomTemperature)+degrees;
 }
