@@ -1,6 +1,16 @@
+
+const circle = {
+	radius: 195
+};
+
 function applyTempEventListeners(){
 	let temperatureWheel = document.getElementById('temperatureWheel');
-	var x = 0;
+	var zt = new ZingTouch.Region(temperatureWheel);
+	zt.bind(temperatureWheel, 'rotate', function(e){
+	//Actions here
+}, false);
+	new ZingTouch.Rotate()
+	/*var x = 0;
 	var y = 0;
 	temperatureWheel.addEventListener('touchstart',function(event){
 		x = event.touches[0].clientX;
@@ -9,6 +19,10 @@ function applyTempEventListeners(){
 	temperatureWheel.addEventListener('touchmove',function(event){
 		let currentX = event.touches[0].clientX;
 		let currentY = event.touches[0].clientY;
+		console.log(event);
+		console.log(event.touches);
+		console.log(currentX);
+		console.log(currentY);
 		let differenceX = x - currentX;
 		let differenceY = y - currentY;
 		x = currentX;
@@ -16,7 +30,7 @@ function applyTempEventListeners(){
 		//Where on the image the touch started, a swipe will increase or decrease angle/temp
 		rotate(3);
 		updateRoomTemperature(1);
-	});
+	});*/
 }
 
 function rotate(angle){
