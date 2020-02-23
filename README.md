@@ -1,1 +1,1 @@
-https://tsb.tarves.no/temp/
+https://tsb.energy/temp/
