@@ -25,7 +25,7 @@ class Application{
 				$this->controller = $urlArray[0].'Controller';
 			}
 			if(isset($urlArray[1])){
-				$this->method =  $urlArray[1];
+				$this->action =  $urlArray[1];
 			}
 		} 
 	}

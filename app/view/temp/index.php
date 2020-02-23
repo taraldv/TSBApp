@@ -14,6 +14,13 @@
 	</div>
 </div>
 <script>
+	let temperatureValueArray = [
+	<?php
+	foreach ($this->viewData as $row) {
+    	echo $row['temperatureValue'].",";
+	}
+	?>
+	];
 	applyTempIndexEventListeners();
 </script>
 <?php include VIEW.'footer.php';?>
