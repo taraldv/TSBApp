@@ -94,7 +94,7 @@ function applyTempIndexEventListeners(){
 		tempGroup.addEventListener("click",function(){
 			let roomName = this.getAttribute("data-url");
 			//console.log(roomName);
-			window.location.href = "/temp/change?rom="+roomName.toLowerCase();
+			window.location.href = "/temperatur/endre?rom="+roomName.toLowerCase();
 		});
 		let tempPolygon = document.createElementNS("http://www.w3.org/2000/svg","polygon");
 		let tempTextRoom = document.createElementNS("http://www.w3.org/2000/svg","text");
@@ -162,7 +162,7 @@ function setInitalTemperature(id){
 		let data = JSON.parse(this.response);
 		roomTemperatureDiv.innerText = data.temperatureValue;
 	});
-	oReq.open("POST", "/temp/getSpecificTemperature");
+	oReq.open("POST", "/temperatur/getSpecificTemperature");
 	oReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	oReq.send("temperatureId="+id);
 }
@@ -177,7 +177,7 @@ function updateRoomTemperature(degrees,id){
 		var oReq = new XMLHttpRequest();
 		oReq.addEventListener("load", function(){
 		});
-		oReq.open("POST", "/temp/updateSpecificTemperature");
+		oReq.open("POST", "/temperatur/updateSpecificTemperature");
 		oReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		oReq.send("temperatureId="+id+"&temperatureValue="+newTemperature);
 	}

@@ -1,9 +1,11 @@
 <?php 
 $action = $this->getAction();
 ?>
-<nav>
-	<ul class='nav nav-pills justify-content-center'>
-	<li class='nav-item'></li>
-	</ul>
+<nav class="navbar navbar-light bg-light">
+	<img style='width: 120px' src="/img/logo2.png">
+    <a href="/"><button class="btn-lg btn-primary" type="button">Hjem</button></a>
+    <a href="/temperatur"><button class="btn-lg btn-primary" type="button">Endre temperatur</button></a>
+    <a href="/"><button class="btn-lg btn-primary" type="button">Forbruk</button></a>
 </nav>
+
 

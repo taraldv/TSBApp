@@ -1,5 +1,5 @@
 <?php
-class TempModel extends Model{
+class TemperaturModel extends Model{
 	
 	public function getAllTemperatures(){
 		$data = $this->query("SELECT temperatureValue FROM temperatureTable")->fetchAll();
