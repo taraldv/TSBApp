@@ -81,7 +81,6 @@ function Plan(width,height) {
 
 function applyTempIndexEventListeners(){
 	//temperatureValueArray contains temperatures matching the index from Plan obj.
-	console.log(temperatureValueArray);
 	let container = document.getElementById('svgContainer');
 	let svg = document.createElementNS("http://www.w3.org/2000/svg","svg");
 	let width = document.body.clientWidth;
