@@ -3,7 +3,6 @@ put -r public php/public
 chmod 770 php/public
 chmod 770 php/public/lib
 chmod 770 php/public/lib/bootstrap
-chmod 770 php/public/lib/zingtouch
 chmod 770 php/public/img
 chmod 770 php/app
 chmod 770 php/app/controller
