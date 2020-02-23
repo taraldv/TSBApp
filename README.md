@@ -1,1 +1,1 @@
-https://tsb.energy/temp/
+https://tsb.energy/
