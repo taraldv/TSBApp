@@ -8,6 +8,7 @@
 			?>
 			
 		</div>
+		<br>
 		<div class='d-inline-block'> temperatur:</div>
 		<div class='d-inline-block' id='degrees'></div>
 		<div class='d-inline-block' id='celcius'>°C</div>
